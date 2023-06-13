@@ -17,7 +17,7 @@ export const ionicMolecules = [
     [{ element: 'Li', number: 1 }, { element: 'Cl', number: 1 }],
     [{ element: 'Na', number: 1 }, { element: 'Cl', number: 1 }],
     [{ element: 'K', number: 1 }, { element: 'Cl', number: 1 }],
-    [{ element: 'Mg', number: 1 }, { elment: 'Cl', number: 2 }],
+    [{ element: 'Mg', number: 1 }, { element: 'Cl', number: 2 }],
     [{ element: 'Ca', number: 1 }, { element: 'Cl', number: 2 }],
     [{ element: 'Ba', number: 1 }, { element: 'Cl', number: 2 }],
     
@@ -146,7 +146,7 @@ const elements: Record<string, string> = {
     "Rg": "roentgenium",
     "Cn": "copernicium"
 }
-const endings: Record<string, string> = = { O: 'oxide', S: 'sulfide', F: 'fluoride', Cl: 'chloride', I: 'iodide', Si: 'silicide', Br: 'bromide' }
+const endings: Record<string, string> = { O: 'oxide', S: 'sulfide', F: 'fluoride', Cl: 'chloride', I: 'iodide', Si: 'silicide', Br: 'bromide' }
 
 
 const prefixes: Record<number, string> = {
