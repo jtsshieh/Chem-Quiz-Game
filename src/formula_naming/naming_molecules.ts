@@ -3,19 +3,33 @@ export const covalentMolecules = [
     [{ element: 'Sb', number: 1 }, { element: 'Br', number: 3 }],
     [{ element: 'B', number: 6 }, { element: 'Si', number: 1 }],
     [{ element: 'Cl', number: 1 }, { element: 'O', number: 2 }],
-    [{ element: 'H', number: 1 }, { element: 'I', number: 1 }],
     [{ element: 'I', number: 1 }, { element: 'F', number: 5 }],
     [{ element: 'N', number: 2 }, { element: 'O', number: 3 }],
     [{ element: 'P', number: 4 }, { element: 'S', number: 5 }],
     [{ element: 'Se', number: 1 }, { element: 'F', number: 6 }],
     [{ element: 'Si', number: 2 }, { element: 'Br', number: 6 }],
-    [{ element: 'S', number: 1 }, { elmenet: 'Cl', number: 4 }],
+    [{ element: 'S', number: 1 }, { element: 'Cl', number: 4 }],
     [{ element: 'B', number: 2 }, { element: 'Si', number: 1 }],
     [{ element: 'N', number: 1 }, { element: 'F', number: 3 }]
 ]
 
 export const ionicMolecules = [
+    [{ element: 'Li', number: 1 }, { element: 'Cl', number: 1 }],
     [{ element: 'Na', number: 1 }, { element: 'Cl', number: 1 }],
+    [{ element: 'K', number: 1 }, { element: 'Cl', number: 1 }],
+    [{ element: 'Mg', number: 1 }, { elment: 'Cl', number: 2 }]
+    [{ element: 'Ca', number: 1 }, { element: 'Cl', number: 2 }],
+    [{ element: 'Ba', number: 1 }, { element: 'Cl', number: 2 }],
+    
+    [{ element: 'Li', number: 1 }, { element: 'Br', number: 1 }],
+    [{ element: 'Na', number: 1 }, { element: 'Br', number: 1 }],
+    [{ element: 'Ba', number: 1 }, { element: 'Br', number: 2 }],
+    
+    [{ element: 'Mg', number: 1 }, { element: 'S', number: 1 }],
+
+    [{ element: 'Na', number: 1 }, { element: 'F', number: 1 }],
+    [{ element: 'Mg', number: 1 }, { element: 'F', number: 2 }],
+    [{ element: 'Li', number: 1 }, { element: 'F', number: 1 }],
 ];
 
 const elements: Record<string, string> = {
@@ -147,7 +161,7 @@ const prefixes: Record<number, string> = {
     9: 'nona',
     10: 'deca'
 }
-export function getName(isCovalent: string, molecule: {element: string, number: number}[]) {
+export function getName(isCovalent: boolean, molecule: {element: string, number: number}[]) {
     if (isCovalent) {
         const first = molecule[0];
         const second = molecule[1];

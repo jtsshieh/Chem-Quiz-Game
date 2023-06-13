@@ -16,7 +16,7 @@ export default function FormulaNaming() {
 
     function checkAnswer() {
         console.log(getName(isCovalent, molecule))
-        if (input === getName(isCovalent, molecule)) {
+        if (input.toLowerCase() === getName(isCovalent, molecule)) {
             setCorrectState(true);
             setModalOpen(true);
         } else {
@@ -32,8 +32,9 @@ export default function FormulaNaming() {
                 setClose={() => {
                     setModalOpen(false);
                     if (correctState === true) {
-                        setIsCovalent(Math.random() > 0.5);
-                        setMolecule(isCovalent ? covalentMolecules[Math.floor(Math.random() * covalentMolecules.length)] : ionicMolecules[Math.floor(Math.random() * ionicMolecules.length)]);
+                        const isCovalentTemp = Math.random() > 0.5
+                        setIsCovalent(isCovalentTemp);
+                        setMolecule(isCovalentTemp ? covalentMolecules[Math.floor(Math.random() * covalentMolecules.length)] : ionicMolecules[Math.floor(Math.random() * ionicMolecules.length)]);
                         setInput('');
                     }
                 }}
