@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'
 const problemTypes = [
     'molar-pH',
     'moles-pH',
-    
 ] as const;
 
 export default function WeakAConjB() {
@@ -33,8 +32,6 @@ export default function WeakAConjB() {
             setModalOpen(true);
         }
     }
-
-    if (problemType === 'molar-pH' || problemType === 'moles-pH') {
         const isMolar = problemType === 'molar-pH';
         return (
             <div>
@@ -110,6 +107,5 @@ export default function WeakAConjB() {
                     </Button>
                 </div>
             </div>
-        )
     } 
 }
